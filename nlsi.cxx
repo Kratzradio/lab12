@@ -79,7 +79,7 @@ void linstep(cmplx* const psi0,const double dt, const double dx, const int N)
 void nlinstep(cmplx* const psi0,const double dt, const double dx, const int N)
 {
 	for(int i=0; i<N; i++){
-	  psi0[i] = psi0[i]*exp(cmplx(0.0, norm(psi0[i])*norm(psi0[i])*dt));
+	  psi0[i] = psi0[i]*exp(cmplx(0.0, -norm(psi0[i])*dt));
 	}
 }
 //-----------------------------------
